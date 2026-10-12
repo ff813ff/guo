@@ -30,10 +30,10 @@
 </head>
 <body>
 
-  <!-- 电脑端拦截弹窗 -->
+  <!-- 电脑端拦截弹窗（英文版） -->
   <div id="desktop-block" style="display:none; position:fixed; inset:0; background:#0f0e0c; z-index:9999; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:20px;">
-    <h2 style="font-family:'Songti SC', serif; font-size:1.5rem; margin-bottom:12px; color:#f0ece3;">请使用手机访问</h2>
-    <p style="color:#a8a191; font-size:0.9rem; margin-bottom:24px;">为获得更好的浏览体验，请使用手机默认浏览器打开本页面。</p>
+    <h2 style="font-family:'Songti SC', serif; font-size:1.5rem; margin-bottom:12px; color:#f0ece3;">Mobile Access Only</h2>
+    <p style="color:#a8a191; font-size:0.9rem; margin-bottom:24px; max-width: 300px; line-height: 1.5;">For a better browsing experience, please open this page in your mobile browser.</p>
     <div style="font-size:3rem;">📱</div>
   </div>
 
@@ -51,7 +51,7 @@
 
   <script src="data.js"></script>
   <script>
-    // 电脑检测
+    // 手机检测
     if (window.innerWidth > 768) {
       document.getElementById('desktop-block').style.display = 'flex';
     }
