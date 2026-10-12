@@ -11,12 +11,12 @@
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
     
-    /* 顶部 Hero 大图区域 —— 改成全屏 100vh 并加暗色遮罩 */
-    .hero { position: relative; width: 100%; height: 100vh; overflow: hidden; background: #1a1814; }
+    /* 顶部 Hero 大图区域 —— 改成全屏高度，加暗色遮罩 */
+    .hero { position: relative; width: 100%; height: 100dvh; min-height: 600px; overflow: hidden; background: #1a1814; }
     .hero img { width: 100%; height: 100%; object-fit: cover; }
     .hero-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(15,14,12,0.1), rgba(15,14,12,0.85));
+      background: linear-gradient(to bottom, rgba(15,14,12,0.05), rgba(15,14,12,0.85));
       pointer-events: none;
     }
     
@@ -71,8 +71,8 @@
 
   <!-- Hero Image Section -->
   <section class="hero">
-    <!-- 请确保在根目录的 images 文件夹里放了一张名为 hero.jpg 的图片 -->
-    <img src="images/hero.jpg" alt="Hero" onerror="this.style.display='none'">
+    <!-- 去掉了 onerror，方便你排查图片是否损坏 -->
+    <img src="images/hero.jpg" alt="Hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-text">Scroll down, find your heartbeat</div>
